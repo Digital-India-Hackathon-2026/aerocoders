@@ -1,0 +1,81 @@
+{
+  "airline_rules": [
+    {
+      "airline": "indigo",
+      "document_source_type": "cabin_allowance_and_personal_items",
+      "item_category": "Laptop",
+      "placement_logic": "SHOULDER_BAG",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Max 3kg weight limit for personal article",
+      "record_hash": "887af29efc0670c2"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "cabin_allowance_and_personal_items",
+      "item_category": "Ladies Purse",
+      "placement_logic": "SHOULDER_BAG",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Max 3kg weight limit for personal article",
+      "record_hash": "4fd36eeb5fb8de10"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "cabin_allowance_and_personal_items",
+      "item_category": "Liquids",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 100ml per container in cabin; must fit in 1L transparent bag",
+      "record_hash": "eb799627fde7eb75"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "cabin_allowance_and_personal_items",
+      "item_category": "Alcoholic Beverages",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 5L in check-in if 24-70% alcohol; cabin only if from security hold area",
+      "record_hash": "5c0a993d2bc24d37"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "cabin_allowance_and_personal_items",
+      "item_category": "Stroller or Baby Pram",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "One per infant allowed free of charge",
+      "record_hash": "2a3ff925d5b264f4"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "cabin_allowance_and_personal_items",
+      "item_category": "Arms or Explosive Substances",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be declared; concealment is an offence",
+      "record_hash": "5b3b71f1530d6630"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "cabin_allowance_and_personal_items",
+      "item_category": "Offensive Items",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Items determined to be of offensive nature are not permitted",
+      "record_hash": "aa83932bc99ab58e"
+    }
+  ]
+}

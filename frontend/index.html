@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBaggage AI - Pack Smart, Travel Stress-Free</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="bg-[#0f1115] text-slate-100 font-['Plus_Jakarta_Sans'] antialiased selection:bg-green-500 selection:text-black">
+
+    <nav id="main-nav" class="backdrop-blur-md bg-[#161920]/80 border-b border-zinc-800/80 sticky top-0 z-50 hidden transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer group" onclick="navigateTo('home')">
+                <span class="text-3xl transition-transform group-hover:rotate-12 duration-300">🛫</span>
+                <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">SmartBaggage AI</span>
+            </div>
+            <div class="flex space-x-8 items-center font-semibold text-sm">
+                <button onclick="navigateTo('home')" class="nav-link text-green-400 border-b-2 border-green-400 pb-2 transition-all duration-200">Home</button>
+                <button onclick="navigateTo('scanner')" class="nav-link text-zinc-400 hover:text-white pb-2 transition-all duration-200">AI Capture</button>
+                <button onclick="navigateTo('checklist')" class="nav-link text-zinc-400 hover:text-white pb-2 transition-all duration-200">Checklist</button>
+                <div class="flex items-center space-x-3 pl-6 border-l border-zinc-800">
+                    <img id="user-avatar" src="" class="w-8 h-8 rounded-full border border-zinc-700 object-cover" alt="User profile">
+                    <button onclick="logout()" class="text-zinc-400 hover:text-rose-400 transition-all duration-200">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="view-auth" class="min-h-screen flex flex-col items-center justify-center bg-[#050505] text-white px-4 relative">
+        <div id="auth-main-card" class="w-full max-w-md bg-[#121212] rounded-2xl p-10 shadow-[0_8px_40px_rgba(0,0,0,0.7)] border border-zinc-800/80 z-10">
+            <div class="flex flex-col items-center mb-8">
+                <div class="text-5xl mb-2">🛫</div>
+                <h1 class="text-3xl font-black tracking-tighter text-white">SmartBaggage AI</h1>
+                <p id="auth-subtitle" class="text-zinc-500 text-[11px] mt-1.5 font-bold tracking-widest uppercase">Secure Identity Gateway</p>
+            </div>
+
+            <!-- FIXED: Added a concrete local button for Google Auth Simulation -->
+            <div class="w-full flex justify-center mb-5">
+                <button type="button" onclick="handleGoogleLocalAuth()" class="w-full bg-white hover:bg-zinc-100 text-zinc-900 font-bold py-3 px-4 rounded-full flex items-center justify-center space-x-3 text-sm transition-all duration-200 shadow-md">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    <span>Continue with Google</span>
+                </button>
+            </div>
+
+            <div class="relative flex py-2 items-center mb-5">
+                <div class="flex-grow border-t border-zinc-800"></div>
+                <span class="flex-shrink mx-4 text-zinc-600 text-[9px] font-bold uppercase tracking-widest">or</span>
+                <div class="flex-grow border-t border-zinc-800"></div>
+            </div>
+
+            <!-- FIXED: Explicitly wired the local testing form submission handler -->
+            <form id="local-login-form" onsubmit="handleEmailAuthSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-widest mb-2 text-zinc-400">Email address</label>
+                    <input type="email" id="auth-email" placeholder="alex@domain.com" class="w-full bg-[#1c1c1e] border border-zinc-800 rounded-lg p-3 text-white placeholder-zinc-600 focus:outline-none focus:bg-[#2c2c2e] focus:border-zinc-700 transition-all text-sm font-medium" required>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-widest mb-2 text-zinc-400">Password</label>
+                    <input type="password" id="auth-password" placeholder="••••••••" class="w-full bg-[#1c1c1e] border border-zinc-800 rounded-lg p-3 text-white placeholder-zinc-600 focus:outline-none focus:bg-[#2c2c2e] focus:border-zinc-700 transition-all text-sm font-medium" required>
+                </div>
+                
+                <div id="auth-error-msg" class="text-xs font-semibold text-rose-500 bg-rose-500/10 border border-rose-500/20 p-3 rounded-lg hidden"></div>
+                
+                <button type="submit" id="auth-submit-btn" class="w-full bg-[#1ed760] hover:bg-[#1fdf64] text-black font-extrabold py-3 rounded-full transition-all duration-200 tracking-wider text-xs shadow-md uppercase">Sign In</button>
+            </form>
+
+            <div class="mt-6 text-center">
+                <button onclick="toggleAuthMode()" id="auth-toggle-link" class="text-xs font-semibold text-zinc-400 hover:text-white underline underline-offset-4">Don't have an account? Create one</button>
+            </div>
+        </div>
+        
+        <!-- Keep loading screen layer underneath -->
+        <div id="auth-loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050505]/95 backdrop-blur-md hidden">
+            <div class="w-12 h-12 border-4 border-t-green-500 border-zinc-800 rounded-full animate-spin"></div>
+            <p id="auth-loading-text" class="text-xs font-bold text-zinc-500 tracking-widest uppercase mt-4">Verifying Credentials...</p>
+        </div>
+    </section>
+            
+
+    <!-- Main Home Landing Layout -->
+    <main id="view-home" class="max-w-7xl mx-auto px-6 py-12 hidden">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center space-x-2 bg-zinc-800/60 border border-zinc-700/50 px-3 py-1.5 rounded-full text-xs font-bold text-zinc-300">
+                    <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Active Flight Deck Core Configuration</span>
+                </div>
+                <h1 class="text-6xl font-black tracking-tight text-white leading-[1.1]">Pack Smart.<br><span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">Travel Stress-Free.</span></h1>
+                <p class="text-zinc-400 text-lg leading-relaxed max-w-lg">An interactive computer vision platform that automatically organizes and simulates the classification of your items before departure.</p>
+                <button onclick="navigateTo('scanner')" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold text-lg px-10 py-4.5 rounded-full shadow-[0_4px_20px_rgba(59,130,246,0.3)] hover:shadow-[0_4px_25px_rgba(59,130,246,0.5)] transition-all transform hover:-translate-y-1">Start Scanning</button>
+            </div>
+            <div class="bg-gradient-to-tr from-zinc-900 to-zinc-800/40 rounded-3xl p-12 border border-zinc-800/80 flex items-center justify-center min-h-[380px] shadow-2xl relative overflow-hidden group">
+                <div class="absolute inset-0 bg-blue-500/5 blur-[120px] rounded-full group-hover:bg-blue-500/10 transition-all duration-500"></div>
+                <span class="text-[140px] drop-shadow-2xl filter group-hover:scale-110 transition-transform duration-500 ease-out select-none">🧳</span>
+            </div>
+        </div>
+
+        <div class="mt-24">
+            <h2 class="text-2xl font-black text-center mb-2 tracking-tight text-white">Choose Your Airline Matrix</h2>
+            <p class="text-zinc-400 text-center text-sm mb-10">Select your provider to unpack core weight limits automatically.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div id="airline-airindia" onclick="selectAirline('Air India')" class="airline-card group bg-[#161920]/40 p-8 rounded-2xl border border-zinc-800 hover:border-zinc-700 cursor-pointer shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-orange-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+                    <div class="flex justify-between items-start">
+                        <span class="text-4xl block mb-4">✈️</span>
+                        <span id="badge-ai" class="text-[10px] uppercase font-bold tracking-widest text-zinc-500 border border-zinc-800 px-2.5 py-1 rounded-full">Inactive</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white tracking-tight">Air India</h3>
+                    <p class="text-zinc-400 text-sm mt-2 font-medium">Domestic & International Hub Integration Rules</p>
+                </div>
+                <div id="airline-indigo" onclick="selectAirline('IndiGo')" class="airline-card group bg-[#161920]/40 p-8 rounded-2xl border border-zinc-800 hover:border-zinc-700 cursor-pointer shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
+                    <div class="flex justify-between items-start">
+                        <span class="text-4xl block mb-4">🚀</span>
+                        <span id="badge-indigo" class="text-[10px] uppercase font-bold tracking-widest text-zinc-500 border border-zinc-800 px-2.5 py-1 rounded-full">Inactive</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white tracking-tight">IndiGo</h3>
+                    <p class="text-zinc-400 text-sm mt-2 font-medium">Rapid Regional Cabin Optimization Controls</p>
+                </div>
+            </div>
+
+            <div id="class-selection-container" class="mt-12 max-w-4xl mx-auto hidden animate-fade-in">
+                <h3 class="text-center font-bold text-xs uppercase tracking-widest text-zinc-400 mb-6">Select Cabin Class Tier Configuration</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <button onclick="selectCabinClass('Economy')" id="tier-Economy" class="tier-card p-4 rounded-xl border border-zinc-800 bg-[#13161d] text-center transition-all hover:border-zinc-600">
+                        <span class="block text-xl mb-1">🎫</span>
+                        <span class="block font-bold text-sm text-white">Economy</span>
+                        <span class="text-[10px] text-zinc-400 font-semibold">Standard 7kg / 15kg</span>
+                    </button>
+                    <button onclick="selectCabinClass('Flex Plus')" id="tier-Flex Plus" class="tier-card p-4 rounded-xl border border-zinc-800 bg-[#13161d] text-center transition-all hover:border-zinc-600">
+                        <span class="block text-xl mb-1">🎟️</span>
+                        <span class="block font-bold text-sm text-white">Flex Plus</span>
+                        <span class="text-[10px] text-zinc-400 font-semibold">Allowed 7kg / 20kg</span>
+                    </button>
+                    <button onclick="selectCabinClass('Business')" id="tier-Business" class="tier-card p-4 rounded-xl border border-zinc-800 bg-[#13161d] text-center transition-all hover:border-zinc-600">
+                        <span class="block text-xl mb-1">💼</span>
+                        <span class="block font-bold text-sm text-white">Business</span>
+                        <span class="text-[10px] text-zinc-400 font-semibold">Allowed 12kg / 35kg</span>
+                    </button>
+                    <button onclick="selectCabinClass('First Class')" id="tier-First Class" class="tier-card p-4 rounded-xl border border-zinc-800 bg-[#13161d] text-center transition-all hover:border-zinc-600">
+                        <span class="block text-xl mb-1">👑</span>
+                        <span class="block font-bold text-sm text-white">First Class</span>
+                        <span class="text-[10px] text-zinc-400 font-semibold">Allowed 15kg / 40kg</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="selected-airline-banner" class="max-w-md mx-auto mt-8 p-3.5 rounded-full bg-zinc-900/80 border border-zinc-800 text-center text-xs font-bold text-emerald-400 hidden shadow-inner tracking-wide"></div>
+        </div>
+    </main>
+
+    <!-- Scan Engine UI Container Sandbox -->
+    <section id="view-scanner" class="max-w-7xl mx-auto px-6 py-12 hidden">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-4xl font-black text-white tracking-tight mb-3">📸 AI Object Capture Sandbox</h2>
+            <p class="text-zinc-400 text-sm font-medium">Point your physical hardware camera tracking element at baggage layers to fire inference vectors.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 bg-[#13161c] rounded-3xl border border-zinc-800/80 overflow-hidden shadow-2xl relative">
+                <div class="absolute top-4 left-4 bg-black/70 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-widest text-rose-400 flex items-center z-20 border border-rose-500/20">
+                    <span class="w-2 h-2 bg-rose-500 rounded-full mr-2 animate-pulse"></span> LIVE BACKEND SHUTTER FEED
+                </div>
+                
+                <div class="w-full bg-black aspect-video relative flex items-center justify-center overflow-hidden">
+                    <video id="webcam-stream" autoplay playsinline class="w-full h-full object-cover transform -scale-x-100 hidden"></video>
+                    <div id="camera-fallback-placeholder" class="text-center p-8 space-y-4">
+                        <span class="text-5xl block animate-bounce">📷</span>
+                        <p class="text-sm font-semibold text-zinc-400">Requesting local camera module stream array context...</p>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-[#161a23] border-t border-zinc-800/80 flex flex-col sm:flex-row gap-4 items-center justify-between">
+                    <div class="text-left">
+                        <span class="text-xs font-bold text-zinc-400 block">Capture Source Routing</span>
+                        <span id="camera-status-label" class="text-xs font-semibold text-amber-400">Initializing native peripheral feed...</span>
+                    </div>
+                    <div class="flex space-x-3 w-full sm:w-auto">
+                        <button onclick="toggleCameraHardware()" class="flex-1 sm:flex-initial bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-5 py-2.5 rounded-full text-xs transition-all">Restart Cam</button>
+                        <button onclick="triggerBackendPrediction()" class="flex-1 sm:flex-initial bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-extrabold px-6 py-2.5 rounded-full text-xs shadow-lg transform hover:scale-[1.02] transition-all">Trigger Capture Shutter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-[#13161c] border border-zinc-800 p-6 rounded-2xl shadow-xl">
+                    <h3 class="font-black text-sm text-white uppercase tracking-wider mb-4 text-center">Prediction Matrix Variables</h3>
+                    <div id="sandbox-container" class="space-y-4">
+                        <div class="bg-zinc-900/60 p-6 rounded-xl border border-zinc-800 flex flex-col items-center justify-center text-center h-44 relative overflow-hidden">
+                            <span class="absolute top-3 left-3 text-[9px] uppercase tracking-widest text-zinc-500 font-bold">Detection Vector</span>
+                            <div id="animated-item-target" class="text-6xl filter drop-shadow-lg select-none">❓</div>
+                            <div id="animated-item-label" class="mt-4 font-bold text-xs tracking-tight text-zinc-400">Awaiting YOLO processing loop context...</div>
+                        </div>
+
+                        <div id="weight-input-container" class="p-4 bg-[#1a1f29] rounded-xl hidden border border-amber-500/20 shadow-inner">
+                            <label class="block text-[10px] font-black text-amber-400 uppercase tracking-wider mb-2">Mass Variable Parameter</label>
+                            <div class="flex space-x-3">
+                                <input type="number" id="item-weight" placeholder="Mass load weight factor..." class="w-full bg-[#11141a] px-4 py-2.5 rounded-lg border border-zinc-800 text-white text-sm font-semibold focus:outline-none focus:border-amber-500 transition-all" step="0.1" min="0.1">
+                                <span class="bg-[#11141a] border border-zinc-800 px-4 rounded-lg text-xs font-black tracking-widest text-zinc-400 flex items-center select-none">KG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 border-t border-zinc-900 pt-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div id="box-cabin" class="bg-[#101916] border border-emerald-900/40 rounded-2xl p-5 h-48 flex flex-col justify-between shadow-md relative overflow-hidden group">
+                    <div class="flex justify-between items-center"><span class="font-extrabold text-emerald-400 text-xs uppercase tracking-wider">Cabin Tray Allocation</span> <span class="text-xl">💼</span></div>
+                    <div id="cabin-box-items" class="text-xs text-emerald-500/70 font-medium overflow-y-auto max-h-24 flex flex-wrap gap-1">Empty</div>
+                </div>
+                <div id="box-checkin" class="bg-[#10141f] border border-blue-900/40 rounded-2xl p-5 h-48 flex flex-col justify-between shadow-md relative overflow-hidden group">
+                    <div class="flex justify-between items-center"><span class="font-extrabold text-blue-400 text-xs uppercase tracking-wider">Check-in Tray Allocation</span> <span class="text-xl">🧳</span></div>
+                    <div id="checkin-box-items" class="text-xs text-blue-500/70 font-medium overflow-y-auto max-h-24 flex flex-wrap gap-1">Empty</div>
+                </div>
+                <div id="box-shoulder" class="bg-[#191410] border border-amber-900/40 rounded-2xl p-5 h-48 flex flex-col justify-between shadow-md relative overflow-hidden group">
+                    <div class="flex justify-between items-center"><span class="font-extrabold text-amber-400 text-xs uppercase tracking-wider">Personal Shoulder Allocation</span> <span class="text-xl">🎒</span></div>
+                    <div id="shoulder-box-items" class="text-xs text-amber-500/70 font-medium overflow-y-auto max-h-24 flex flex-wrap gap-1">Empty</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Layout Container Framework -->
+    <section id="view-checklist" class="max-w-5xl mx-auto px-6 py-12 hidden">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-black text-white tracking-tight">📋 Aggregated Baggage Checklist</h2>
+            <p class="text-zinc-400 text-sm font-medium mt-1">Live threshold evaluation matching cabin configurations.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-6 mb-10">
+            <div class="bg-[#13161c] p-6 rounded-xl border border-zinc-800/80 shadow-md">
+                <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest block mb-1">Cabin Capacity Matrix</span>
+                <span id="metric-cabin-weight" class="text-2xl font-black text-white tracking-tight">0.0 / 7.0 KG</span>
+                <div class="w-full bg-zinc-800 h-1.5 rounded-full mt-3 overflow-hidden"><div id="progress-cabin" class="bg-emerald-500 h-full w-0 transition-all duration-500"></div></div>
+            </div>
+            <div class="bg-[#13161c] p-6 rounded-xl border border-zinc-800/80 shadow-md">
+                <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest block mb-1">Check-in Capacity Matrix</span>
+                <span id="metric-checkin-weight" class="text-2xl font-black text-white tracking-tight">0.0 / 15.0 KG</span>
+                <div class="w-full bg-zinc-800 h-1.5 rounded-full mt-3 overflow-hidden"><div id="progress-checkin" class="bg-blue-500 h-full w-0 transition-all duration-500"></div></div>
+            </div>
+            <div class="bg-[#13161c] p-6 rounded-xl border border-zinc-800/80 shadow-md flex flex-col justify-center">
+                <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest block mb-1">Status Diagnostics</span>
+                <span id="metric-status-flag" class="text-sm font-black uppercase tracking-wider text-emerald-400 mt-1">Within Thresholds</span>
+            </div>
+        </div>
+
+        <div id="optimization-banner" class="mb-10 p-5 bg-gradient-to-r from-amber-950/40 to-orange-950/20 border border-amber-500/20 rounded-xl hidden flex items-start space-x-4 shadow-xl">
+            <span class="text-2xl">💡</span>
+            <div>
+                <h4 class="font-extrabold text-amber-400 text-sm tracking-tight">Optimization Route Warning Rule Fire</h4>
+                <p class="text-xs text-zinc-400 mt-1 leading-relaxed">Mass limits exceeded. Consider prioritizing target elements inside your personal shoulder bag configuration.</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-[#13161c]/40 p-6 rounded-2xl border border-zinc-800/50">
+                <h3 class="font-extrabold text-sm text-emerald-400 tracking-tight border-b border-zinc-800 pb-3 mb-4 flex justify-between items-center">
+                    <span>💼 Cabin Baggage Stack</span>
+                    <span id="checklist-cabin-cap-label" class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2.5 py-0.5 rounded-full border border-emerald-500/20 font-bold">Max 7kg</span>
+                </h3>
+                <div id="checklist-cabin-list" class="space-y-3"></div>
+            </div>
+            <div class="bg-[#13161c]/40 p-6 rounded-2xl border border-zinc-800/50">
+                <h3 class="font-extrabold text-sm text-blue-400 tracking-tight border-b border-zinc-800 pb-3 mb-4 flex justify-between items-center">
+                    <span>🧳 Checked Freight Stack</span>
+                    <span id="checklist-checkin-cap-label" class="text-[10px] bg-blue-500/10 text-blue-400 px-2.5 py-0.5 rounded-full border border-blue-500/20 font-bold">Max 15kg</span>
+                </h3>
+                <div id="checklist-checkin-list" class="space-y-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

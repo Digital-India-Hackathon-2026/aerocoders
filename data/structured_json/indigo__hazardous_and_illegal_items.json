@@ -1,0 +1,114 @@
+{
+  "airline_rules": [
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Power Bank",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Must be in hand baggage, max 2 pieces, terminals taped.",
+      "record_hash": "c4aec40af2db073b"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Hoverboard",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Strictly prohibited.",
+      "record_hash": "1006f7a96bf4e382"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Liquids",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Max 100ml per container in cabin; must fit in 1L transparent bag.",
+      "record_hash": "3fe29d5c82988f19"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Firearms",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be unloaded, hard-sided locked case, declared at check-in.",
+      "record_hash": "13ef9dbb09f85e6d"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Laptop",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Recommended in cabin; if checked, must be turned off and packed securely.",
+      "record_hash": "c5d472c57cf3e6d2"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Alcoholic Beverages",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 5L in check-in if <70% ABV; cabin only if purchased in security hold.",
+      "record_hash": "ca69aebd3ced2aeb"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Musical Instruments",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Requires special handling fee.",
+      "record_hash": "dcb6d523adbf7ecc"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Satellite Phone",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Not allowed in India.",
+      "record_hash": "cfbbeee24e142ec8"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Live Human Organs",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be carried as hand baggage.",
+      "record_hash": "247e3e0837e029bb"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "hazardous_and_illegal_items",
+      "item_category": "Urns with ashes",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Allowed in hand baggage.",
+      "record_hash": "d22e564d6f8ca6d3"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "airline_rules": [
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Handbag or Purse",
+      "placement_logic": "SHOULDER_BAG",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Must fit under seat; max 3kg.",
+      "record_hash": "b22323119f3a75a2"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Laptop",
+      "placement_logic": "SHOULDER_BAG",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Must fit under seat; max 3kg.",
+      "record_hash": "3b765b700735ee53"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Umbrella",
+      "placement_logic": "SHOULDER_BAG",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Folding kind only.",
+      "record_hash": "30ad4b214f1da667"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Medicines",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must have prescription; exception to liquid rules.",
+      "record_hash": "de9262dab3fa7ec3"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Alcoholic Beverages",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Only from Security Hold Area; max 1L in clear bag.",
+      "record_hash": "28ad47b77294aa1c"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Lithium Batteries",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Spare batteries must be in hand baggage only.",
+      "record_hash": "12e4dedabf567c70"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Power Banks",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 2 units; must be packed to prevent short circuits.",
+      "record_hash": "968745f6bc50d2bc"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Kirpan",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Domestic flights only; specific size limits apply.",
+      "record_hash": "7129bcf6df39c797"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Drones",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Only up to 2kg allowed.",
+      "record_hash": "a301005939e385f6"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Cremated Remains",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Urn must be X-ray transparent for cabin.",
+      "record_hash": "9d321b39559f25b2"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "cabin_item_placement",
+      "item_category": "Liquids/Gels/Aerosols",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 100ml per container for cabin.",
+      "record_hash": "e2afda77456cc8a1"
+    }
+  ]
+}

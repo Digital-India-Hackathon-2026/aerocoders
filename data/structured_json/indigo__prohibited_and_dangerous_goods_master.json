@@ -1,0 +1,114 @@
+{
+  "airline_rules": [
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Power Bank",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 160 Wh, power must be visible",
+      "record_hash": "bcf616851a20ed09"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Perfume",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 2kg/2L total, individual items max 0.5kg/0.5L",
+      "record_hash": "7353e20e58c61baa"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Sharp Objects",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Includes knives, scissors, blades, and sharp tools",
+      "record_hash": "93ed6e6ba27fac7f"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Laptop",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Recommended in cabin; subject to BCAS regulations",
+      "record_hash": "364dde199fdf3fc7"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Liquids/Gels/Aerosols",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Max 100ml per container in 1L resealable bag",
+      "record_hash": "d2dd18e3a21ee690"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Compressed Gases",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Includes oxygen canisters, butane, and flammable gases",
+      "record_hash": "3f996cc42f5b5a68"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Explosives/Munitions",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Includes fireworks, flares, and ammunition",
+      "record_hash": "69af3d0b9af4677f"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "E-cigarettes",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Banned from all baggage",
+      "record_hash": "8a9c332986670693"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Firearms",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Requires valid license and handling charges",
+      "record_hash": "c2a3a55a6d46fd0c"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "prohibited_and_dangerous_goods_master",
+      "item_category": "Umbrella",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Only blunt tip allowed in cabin; sharp tips in check-in",
+      "record_hash": "28ec2f2d3885e7d2"
+    }
+  ]
+}

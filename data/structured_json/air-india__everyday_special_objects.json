@@ -1,0 +1,92 @@
+{
+  "airline_rules": [
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "Musical Instrument",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Small ones in cabin; large ones require extra seat or check-in.",
+      "record_hash": "a6715e37389146f7"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "Sports Equipment",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 32kg/300cm; requires special handling fee.",
+      "record_hash": "fc0729f11492671c"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "Diving Lamp",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must isolate battery/heating element.",
+      "record_hash": "fb8c8d80874fd3a3"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "Underwater Camera",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Battery must be under 160Wh; switch off if checked.",
+      "record_hash": "5375d14ffa90db35"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "LCD/LED TV",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 54 inches; oversize charges may apply.",
+      "record_hash": "f800c929ea31f600"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "Firearm",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be declared; max 50 cartridges; requires license.",
+      "record_hash": "507179ce82f77dc3"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "Cremated Human Remains (Urn)",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be X-ray transparent for cabin; securely sealed.",
+      "record_hash": "e6d773b061332d90"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "everyday_special_objects",
+      "item_category": "Powder-like substances",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Over 350ml in cabin subject to extra screening; check-in recommended.",
+      "record_hash": "c40099bb1ac949cd"
+    }
+  ]
+}

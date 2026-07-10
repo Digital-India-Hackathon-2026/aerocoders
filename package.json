@@ -1,0 +1,19 @@
+{
+  "name": "smart-ai-baggage-pipeline",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Data pipeline for Smart AI Baggage app",
+  "main": "src/scraper.js",
+  "scripts": {
+    "scrape": "node src/scraper.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.11.0",
+    "@supabase/supabase-js": "^2.110.2",
+    "axios": "^1.18.1",
+    "dotenv": "^16.6.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

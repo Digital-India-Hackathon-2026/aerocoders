@@ -1,0 +1,114 @@
+{
+  "airline_rules": [
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Wheelchair",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be fully collapsible and passenger must be dependent on it.",
+      "record_hash": "8336e68b858584fb"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Crutches",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Passenger must be dependent on them.",
+      "record_hash": "3104c8785c91bfb7"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Prosthetic device",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Passenger must be dependent on them.",
+      "record_hash": "e5bc13a39eebe59b"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Sports/Skiing equipment",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Subject to special baggage fees.",
+      "record_hash": "598d13f492e94630"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Golf bags",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Subject to special baggage fees.",
+      "record_hash": "e66ffc8fdda4be23"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Bicycles",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Subject to special baggage fees.",
+      "record_hash": "8934ba7b875082f2"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Surf boards",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Subject to special baggage fees.",
+      "record_hash": "e246b0cf6199a2c2"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Large TV (LCD/LED)",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "If larger than 99.06cm (81.28cm for Riyadh). Subject to special baggage fees.",
+      "record_hash": "08a9e0a5c29f6646"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Musical Instruments",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Guitars in soft cases allowed in cabin; others must be checked.",
+      "record_hash": "656eb5aa43bc1300"
+    },
+    {
+      "airline": "indigo",
+      "document_source_type": "special_and_oversized_items",
+      "item_category": "Jewelry",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "No liability held by airline; subject to airport security clearance.",
+      "record_hash": "f90c1e56709d5be9"
+    }
+  ]
+}

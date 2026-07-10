@@ -1,0 +1,136 @@
+{
+  "airline_rules": [
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Alcoholic beverages",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 5L, 24-70% ABV, original retail packaging.",
+      "record_hash": "a977b3a087c86b85"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Liquids, Aerosols and Gels (LAGs)",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Max 100ml containers in 1L transparent bag.",
+      "record_hash": "f15840daa3d80f37"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Spare batteries",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Max 2 per person, under 100Wh, terminals protected.",
+      "record_hash": "44721b1e49906cc6"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Power banks",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Max 2 per person, under 100Wh.",
+      "record_hash": "bf1098146d02ded8"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Drones (up to 2kg)",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Switched off, batteries must be in cabin.",
+      "record_hash": "181d2b44e8cf4616"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Laptops",
+      "placement_logic": "CABIN_ONLY",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Battery must be removed if checked in.",
+      "record_hash": "4e44d26782a59a3d"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Dry ice",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Max 2.5kg, must allow gas release.",
+      "record_hash": "fefe6bcd7467279e"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Kirpan",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Blade max 15.2cm, total max 22.8cm.",
+      "record_hash": "3428cfec8c53f6a9"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Diabetes supplies",
+      "placement_logic": "BOTH",
+      "allowed_in_cabin": true,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": true,
+      "handling_notes": "Subject to inspection.",
+      "record_hash": "6d712b33d13df480"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Sharp objects (knives, scissors, tools)",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be sheathed or wrapped.",
+      "record_hash": "ad762e7d0d5b22a8"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "Firearms",
+      "placement_logic": "CHECKIN_ONLY",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": true,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Must be licensed, unloaded, and locked.",
+      "record_hash": "8b39fac6a366a8cd"
+    },
+    {
+      "airline": "air-india",
+      "document_source_type": "dangerous_goods_and_powerbanks",
+      "item_category": "E-cigarettes",
+      "placement_logic": "PROHIBITED",
+      "allowed_in_cabin": false,
+      "allowed_in_checkin": false,
+      "allowed_in_shoulder": false,
+      "handling_notes": "Universal ban.",
+      "record_hash": "c7bcdb1b51b8db51"
+    }
+  ]
+}
